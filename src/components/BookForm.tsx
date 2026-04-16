@@ -106,21 +106,8 @@ export function Books() {
             <p>test</p>
           
 
-            <div>
-                <button
-                    onClick={() => {
-                        setSearch("");
-                        setFilter("all");
-                    }}
-                >
-                    Reset All
-                </button>
-            </div>
-            <div>
-                <button onClick={() => setFilter("all")}>All</button>
-                <button onClick={() => setFilter("read")}>Read</button>
-                <button onClick={() => setFilter("notRead")}>Not Read</button>
-            </div>
+           
+            
 
             <div className={styles.displaycards}>
                 {filteredBook.map((m) => (
