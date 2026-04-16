@@ -1,7 +1,7 @@
-.body {
+body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+  background: linear-gradient(135deg, #adb6dd, #eef2ff);
   font-family: Arial, Helvetica, sans-serif;
 
   display: flex;
@@ -10,16 +10,20 @@
 }
 
 .form {
+  width: 25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 1rem;
+  border: 1px solid darkolivegreen;
+  border-radius: 0.5rem;
 }
 
 .button {
+  width: 3.5rem;
   padding: 0.6rem 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: #5b6cff;
   color: white;
   cursor: pointer;
@@ -38,4 +42,73 @@
 
 .deleteButton:hover {
   background-color: #d60000;
+}
+
+/*
+
+*/
+
+
+.container {
+  width: 20rem;
+  padding: 2rem;
+  margin: 1rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+}
+
+
+.displaycards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: darkorange;
+ 
+}
+
+ul {
+  font-display: 1rem;
+  list-style: none;
+  color: #345f25;
+}
+
+.card {
+  width: 100%;
+  max-width: 250px;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+input {
+  padding: 0.6rem;
+  margin: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+}
+
+.filters {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+.stats {
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
