@@ -5,8 +5,7 @@ import styles from './Book.module.css';
 
 type Props = {
     book: Book;
-
-};
+    };
 
 
 export function BookItem({ book }: Props) {
