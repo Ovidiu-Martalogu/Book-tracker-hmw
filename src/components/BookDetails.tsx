@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { Book } from "./types";
 import styles from './Book.module.css';
@@ -50,8 +50,8 @@ export function BookDetails() {
     if (!book) return <div>Loading...</div>;
 
     return (
+        <>
         <article className={styles.containerDetails}>
-
 
             <h1>{book.title}</h1>
             <h3>Author: {book.author}</h3>
@@ -61,15 +61,16 @@ export function BookDetails() {
                         type="checkbox"
                         checked={book.isRead}
                         onChange={() => SetRead(book)}
-                    />
+                        />
                     Status: {book.isRead ? "Read" : "Not Read"}
                 </h3>
             </div>
-
             <button className={styles.deleteButton} onClick={() => SetDelete()}>
                 Delete
             </button>
+            <Link to="/" className={styles.cancelbutton}>Back</Link>
         </article>
+                        </>
     );
 }
 

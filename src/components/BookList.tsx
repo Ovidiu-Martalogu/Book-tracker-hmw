@@ -39,7 +39,7 @@ export function BookList() {
         />
       ))}
 
-      {books && <Link to="/book/add" className={styles.button}>ADD</Link>}
+      {books && <Link to="/book/add" className={styles.addButton}>Add New Book</Link>}
 
     </article>
 

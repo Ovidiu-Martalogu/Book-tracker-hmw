@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Book } from "../components/types";
+import { Link } from "react-router";
 
 
 import styles from "../components/Book.module.css"
@@ -54,7 +55,8 @@ export function Books() {
                             Add
                         </button>
                     </form>
-                
+
+                <Link to="/" className={styles.cancelbutton}>Cancel</Link>
             </div>
            
            
