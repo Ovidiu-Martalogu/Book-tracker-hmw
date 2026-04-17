@@ -1,7 +1,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #adb6dd, #eef2ff);
+  background: rgb(224, 222, 222);
   font-family: Arial, Helvetica, sans-serif;
 
   display: flex;
@@ -35,9 +35,10 @@ body {
   background: #3f51ff;
 }
 
-
 .deleteButton {
   background-color: #ff3b3b;
+   border-radius: 0.5rem;
+   color: #05149c;
 }
 
 .deleteButton:hover {
@@ -48,15 +49,15 @@ body {
 
 */
 
-
 .container {
-  width: 20rem;
-  padding: 2rem;
+  width: 15rem;
+  padding: 1rem;
   margin: 1rem;
   border: 1px solid;
   border-radius: 0.5rem;
+  background-color: rgba(247, 143, 15, 0.699);
+  color: #05149c;
 }
-
 
 .displaycards {
   width: 100%;
@@ -65,8 +66,6 @@ body {
   gap: 1rem;
   justify-content: center;
   align-items: flex-start;
-  background-color: darkorange;
- 
 }
 
 ul {
@@ -90,7 +89,6 @@ ul {
   transform: translateY(-5px);
 }
 
-
 input {
   padding: 0.6rem;
   margin: 0.3rem;
@@ -106,7 +104,6 @@ input {
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-
 
 .stats {
   margin-bottom: 1rem;

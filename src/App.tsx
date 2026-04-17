@@ -1,18 +1,17 @@
-import { Books } from '../src/components/BookForm'
+import { Route, Routes } from "react-router";
+import { BookList } from "./components/BookList";
+import { BookDetails } from "./components/BookDetails";
+import { Books } from "./components/BookForm";
 
-import './App.css'
+
+
 
 export default function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <h1>Books</h1>
-      </div>
-
-      <Books/>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<BookList />} />
+      <Route path="/books/:id" element={<BookDetails />} />
+      <Route path="/book/add" element={<Books />} />
+    </Routes>
+  );
 }
-

@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import type { Book } from "../components/types";
-import { BookCard } from "../components/BookList";
+import { BookItem } from "../components/BookItem";
 
 import styles from "../components/Book.module.css"
-
-
 
 const apiUrl = `${import.meta.env.VITE_API_URL}/books`;
 
@@ -78,8 +76,8 @@ export function Books() {
         });
 
         //update
-       setBooks((prev) =>prev ? prev.filter((key)=>key.id !== id):prev)
-      
+        setBooks((prev) => prev ? prev.filter((key) => key.id !== id) : prev)
+
     }
 
 
@@ -104,14 +102,9 @@ export function Books() {
     return (
         <>
             <p>test</p>
-          
-
-           
-            
-
             <div className={styles.displaycards}>
                 {filteredBook.map((m) => (
-                    <BookCard
+                    <BookItem
                         key={m.id}
                         book={m}
                         onSetChange={editBook}

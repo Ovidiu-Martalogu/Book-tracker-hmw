@@ -4,18 +4,18 @@
       "id": "1",
       "title": "Atomic Habits",
       "author": "James Clear",
-      "isRead": false
+      "isRead": true
     },
     {
       "id": "2",
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
-      "isRead": true
+      "isRead": false
     },
     {
       "title": "test",
       "author": null,
-      "isRead": false,
+      "isRead": true,
       "id": "Zxe4ZK1GyMU"
     },
     {
