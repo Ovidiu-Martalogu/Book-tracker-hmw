@@ -37,8 +37,9 @@ body {
 
 .deleteButton {
   background-color: #ff3b3b;
-   border-radius: 0.5rem;
-   color: #05149c;
+  border-radius: 0.5rem;
+  color: #05149c;
+  margin-top: 0.5rem;
 }
 
 .deleteButton:hover {
@@ -51,6 +52,24 @@ body {
 
 .container {
   width: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  background-color: rgba(247, 143, 15, 0.699);
+  color: #05149c;
+}
+
+.containerDetails {
+  width: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   padding: 1rem;
   margin: 1rem;
   border: 1px solid;
@@ -64,8 +83,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 ul {
@@ -96,6 +117,16 @@ input {
   border: 1px solid #ccc;
   width: 100%;
   max-width: 300px;
+}
+
+.input {
+  display: flex;
+  width: 15rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+ 
+ 
+
 }
 
 .filters {

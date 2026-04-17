@@ -17,22 +17,27 @@ export function BookList() {
 
   useEffect(() => {
     fetch(apiUrl)
-    .then((response)=> response.json())
-    .then((data) => {
-      setBooks(data);
-      
-    })
+      .then((response) => response.json())
+      .then((data) => {
+        setBooks(data);
+
+      })
   }, []);
-  
-  if (!books)  return <strong>Loading...</strong>;
-  
+
+  if (!books) return <strong>Loading...</strong>;
+
   return (
-    <article>
+    <article className={styles.displaycards}>
       <h1>Books</h1>
       {!books && <strong>Loading ...</strong>}
-      {books?.map((b) => <BookItem
-        key={b.id}
-        book={b} />)}
+
+      {books?.map((b) => (
+        <BookItem
+          key={b.id}
+          book={b}
+         
+        />
+      ))}
 
       {books && <Link to="/book/add" className={styles.button}>ADD</Link>}
 

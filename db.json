@@ -10,25 +10,13 @@
       "id": "2",
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
-      "isRead": false
-    },
-    {
-      "title": "test",
-      "author": null,
-      "isRead": true,
-      "id": "Zxe4ZK1GyMU"
+      "isRead": true
     },
     {
       "title": "test1",
       "author": "test3",
-      "isRead": false,
+      "isRead": true,
       "id": "mlrPqMleX_g"
-    },
-    {
-      "title": "test2",
-      "author": "test4",
-      "isRead": false,
-      "id": "qfCW96jey48"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

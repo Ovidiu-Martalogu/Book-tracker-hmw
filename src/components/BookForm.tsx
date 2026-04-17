@@ -107,7 +107,7 @@ export function Books() {
                     <BookItem
                         key={m.id}
                         book={m}
-                        onSetChange={editBook}
+                        onChange={editBook}
                         onDelete={deleteBook}
                     />
                 ))}

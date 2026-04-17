@@ -6,13 +6,9 @@ import styles from './Book.module.css';
 
 const apiUrl = `${import.meta.env.VITE_API_URL}/books`;
 
-type Props = {
 
-    onSetChange: (book: Book) => void;
-    onDelete: (id: number) => void;
-};
 
-export function BookDetails({ onSetChange, onDelete }: Props) {
+export function BookDetails() {
     const { id } = useParams();
     const [book, setBook] = useState<Book | null>(null);
 
@@ -24,27 +20,55 @@ export function BookDetails({ onSetChange, onDelete }: Props) {
 
 
 
+    async function SetRead(book: Book) {
+        const update = {
+            ...book, isRead: !book.isRead
+        }
+        await fetch(`${apiUrl}/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ isRead: update.isRead })
+
+        }).then((response) => response.json())
+            .then(data => setBook(data));
+
+    }
 
 
+    async function SetDelete() {
+        await fetch(`${apiUrl}/${id}`,{
+            method:"DELETE",
+        })
+            .then((response) => response.json())
+            .then(data => setBook(data));
 
+    }
 
 
     if (!book) return <div>Loading...</div>;
 
     return (
-        <article className={styles.container}>
-            <h1>{book.title}</h1>
-            <p>Author: {book.author}</p>
-            <p>Status: {book.isRead ? "Read" : "Not Read"}</p>
-                <input
-                    type="checkbox"
-                    checked={book.isRead}
-                    onChange={() => onSetChange(book)}
-                />
+        <article className={styles.containerDetails}>
 
-                <button className={styles.deleteButton} onClick={() => onDelete(book.id)}>
-                    Delete
-                </button>
+
+            <h1>{book.title}</h1>
+            <h3>Author: {book.author}</h3>
+            <div className={styles.displaycards}>
+                <h3>
+                    <input
+                        type="checkbox"
+                        checked={book.isRead}
+                        onChange={() => SetRead(book)}
+                    />
+                    Status: {book.isRead ? "Read" : "Not Read"}
+                </h3>
+            </div>
+
+            <button className={styles.deleteButton} onClick={() => SetDelete()}>
+                Delete
+            </button>
         </article>
     );
 }
