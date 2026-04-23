@@ -10,7 +10,7 @@ const apiUrl = `${import.meta.env.VITE_API_URL}/books`;
 
 export function Books() {
     const [book, setBooks] = useState<Book[]>([]);
-  
+
     useEffect(() => {
         fetch(apiUrl)
             .then((response) => response.json())
@@ -44,22 +44,38 @@ export function Books() {
     }
     return (
         <>
-            <div className={styles.displaycards}>
-            <h1>Add new Book</h1>
-                         
-                    <form onSubmit={addBookToDB} className={styles.form}>
-                        <input name="title" placeholder="Book title" />
+            <div className={styles.containerDetails}>
+                <h1>Add new Book</h1>
+
+                <form onSubmit={addBookToDB} className={styles.form}>
+
+
+                    <label htmlFor="title">Insert book title
+
+                        <input type="text" name="title" placeholder="Book title" />
+                    </label>
+                    <label htmlFor="author">Insert author title
+
                         <input name="author" placeholder="author" />
-                        <input name="isRead" placeholder="is read?" />
-                        <button type="submit" className={styles.button}>
-                            Add
-                        </button>
-                    </form>
+                    </label>
+
+                    <button type="submit" className={styles.button}>
+                        Add
+
+
+                    </button>
+
+                </form>
+<div>
 
                 <Link to="/" className={styles.cancelbutton}>Cancel</Link>
+
+                <Link to="/" className={styles.cancelbutton} >Back
+                </Link>
+</div>
             </div>
-           
-           
+
+
         </>
     )
 }

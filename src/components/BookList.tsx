@@ -27,21 +27,23 @@ export function BookList() {
   if (!books) return <strong>Loading...</strong>;
 
   return (
-    <article className={styles.displaycards}>
+    <>
       <h1>Books</h1>
-      {!books && <strong>Loading ...</strong>}
+      <div className={styles.displaycards}>
+        {!books && <strong>Loading ...</strong>}
 
-      {books?.map((b) => (
-        <BookItem
-          key={b.id}
-          book={b}
-         
-        />
-      ))}
+        {books?.map((b) => (
+          <BookItem
+            key={b.id}
+            book={b}
 
-      {books && <Link to="/book/add" className={styles.addButton}>Add New Book</Link>}
+          />
+        ))}
 
-    </article>
+      </div>
+        {books && <Link to="/book/add" className={styles.addButton}>Add New Book</Link>}
+
+    </>
 
 
 
