@@ -1,7 +1,18 @@
 ## UTILS:
-REACT-ROUTER;
-REACT-ROUTER-DOM;
+# Project run with:
+ 
+pnpm install
+pnpm start
 
+# see all books
+ Oance program start, you'll see all the books
+# see details about one book
+if you select one of the books, it will take you to a new page dedicated to it, where you can set whether it is read or delete it
+
+# To add a new book
+
+You have a button to add books.
+This button will take you to a form where you can add a new book.
 
 
 
